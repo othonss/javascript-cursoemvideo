@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Primeira aula</title>
+        <style>
+            body{
+                background-color: #6969ad;
+                color: #fff;
+                font: normal 20pt Arial;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <script>
+            var nome = window.prompt('Digite seu nome: ')
+            var salario = parseFloat(window.prompt('Digite seu salário: '))
+            var salarioDolar = salario / 5
+            var peso = parseFloat(window.prompt('Digite seu peso: '))
+            document.write(`Prazer <strong>${nome}</strong>! Seu nome tem ${nome.length} letras. <br>`)
+            document.write(`Seu nome em maiúsculo fica ${nome.toUpperCase()}.<br>`)
+            document.write(`Seu nome em minúsculo fica ${nome.toLowerCase()}.<br>`)
+            document.write(`Você pesa ${peso.toFixed(2).replace('.', ',')} Kg.<br>`)
+            document.write(`Você recebe ${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}.<br>`)
+            document.write(`Seu salário convertido em dólar ${salarioDolar.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})}`)
+        </script>
+    </body>
+</html>
