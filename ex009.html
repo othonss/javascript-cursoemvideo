@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Estrangeiro ou não</title>
+    </head>
+    <body>
+        <h1>Adivinhe se você faz parte do meu país</h1>
+        Informe o seu pais <input type="text" name="txtpais" id="txtpais">
+        <input type="button" value="Verificar" id="verificar">
+        <div id="resultado">
+
+        </div>
+        <script>
+            var resultado = document.querySelector('div#resultado')
+            var verificar = document.querySelector('input#verificar')
+            verificar.addEventListener('click', clicar)
+            function clicar(){
+                var pais = document.querySelector('input#txtpais').value
+                if(pais == 'Brasil' || 'brasil'){
+                    resultado.innerHTML = `<p>Nós somos do mesmo pais :) <br>Somos brasileiros.</p>`
+                }else{
+                    resultado.innerHTML = `<p>Você é do(a) ${pais}. É estrangeiro.</p>`
+                }
+            }
+        </script>
+    </body>
+</html>
