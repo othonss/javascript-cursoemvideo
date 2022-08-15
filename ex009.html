@@ -19,7 +19,7 @@
             verificar.addEventListener('click', clicar)
             function clicar(){
                 var pais = document.querySelector('input#txtpais').value
-                if(pais == 'Brasil' || 'brasil'){
+                if(pais == 'Brasil' || pais == 'brasil'){
                     resultado.innerHTML = `<p>Nós somos do mesmo pais :) <br>Somos brasileiros.</p>`
                 }else{
                     resultado.innerHTML = `<p>Você é do(a) ${pais}. É estrangeiro.</p>`
